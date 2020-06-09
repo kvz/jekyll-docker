@@ -36,7 +36,7 @@ echo '{
 sudo systemctl restart docker
 ```
 
-## Build
+## Deps
 
 ```bash
 source /usr/local/share/chruby/chruby.sh
@@ -45,8 +45,12 @@ chruby 2.6
 echo "2.6" > ~/.ruby-version
 # gem install docker-template
 bundle install
-
-./script/build kvz/jekyll:4.1.0
-bundle exec docker-template push kvz/jekyll:4.1.0
+script/install
 ```
 
+## Build
+
+```bash
+bundle exec docker-template build kvz/jekyll:4.1.0 --no-push --force --squash \
+&& bundle exec docker-template push kvz/jekyll:4.1.0
+```
