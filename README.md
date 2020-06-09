@@ -2,7 +2,7 @@
 
 Forked from <https://github.com/envygeeks/jekyll-docker>.
 
-## Setup
+## Ruby
 
 First, use <https://github.com/postmodern/ruby-install> and <https://github.com/postmodern/chruby> to bootstrap Ruby 2.6
 
@@ -47,7 +47,6 @@ echo "2.6" > ~/.ruby-version
 bundle install
 
 ./script/build kvz/jekyll:4.1.0
-# bundle exec docker-template push kvz/jekyll
 bundle exec docker-template push kvz/jekyll:4.1.0
 ```
 
