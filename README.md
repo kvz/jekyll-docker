@@ -34,6 +34,8 @@ echo '{
   "experimental": true
 }' |sudo tee /etc/docker/daemon.json
 sudo systemctl restart docker
+
+docker login
 ```
 
 ## Deps
@@ -51,6 +53,6 @@ script/install
 ## Build
 
 ```bash
-bundle exec docker-template build kvz/jekyll:4.1.0 --no-push --force --squash \
-&& bundle exec docker-template push kvz/jekyll:4.1.0
+bundle exec docker-template build kevinvz/jekyll:4.1.0 --no-push --force --squash \
+&& bundle exec docker-template push kevinvz/jekyll:4.1.0
 ```
