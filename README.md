@@ -10,7 +10,7 @@ After a bit of trial and error, here's how I get from a ~vanilla Ubuntu 18.04 ma
 
 ### Ruby
 
-First, use <https://github.com/postmodern/ruby-install> and <https://github.com/postmodern/chruby> to bootstrap Ruby 2.6
+First, use <https://github.com/postmodern/ruby-install> and <https://github.com/postmodern/chruby> to bootstrap Ruby 2.7
 
 ```bash
 cd /tmp
@@ -29,8 +29,8 @@ sudo make install
 ```
 
 ```bash
-ruby-install ruby 2.6
-# >>> Successfully installed ruby 2.6.6 into /home/kvz/.rubies/ruby-2.6.6
+ruby-install ruby 2.7
+# >>> Successfully installed ruby 2.7.1 into /home/kvz/.rubies/ruby-2.7.1
 ```
 
 ### Docker
@@ -49,8 +49,8 @@ docker login
 ```bash
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby 2.6
-echo "2.6" > ~/.ruby-version
+chruby 2.7
+echo "2.7" > ~/.ruby-version
 # gem install docker-template #<-- probably bundle install actually takes care of this
 bundle install
 script/install
