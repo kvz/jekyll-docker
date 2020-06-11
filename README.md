@@ -1,8 +1,14 @@
 # jekyll-docker
 
-Forked from <https://github.com/envygeeks/jekyll-docker>.
+It seems it may take some time before there are official Jekyll docker releases, so as an intermediary solution I this from <https://github.com/envygeeks/jekyll-docker> and pushed out 4.1.0 docker images under `kevinvz/jeyll:4.1.0`.
 
-## Ruby
+> I don't know Ruby or its ecosystem well, and will not have the time to maintain or support this, so use it as is (or probably even better, don't use it at all).
+
+## Prerequisites for building
+
+After a bit of trial and error, here's how I get from a ~vanilla Ubuntu 18.04 machine to building a Jekyll image.
+
+### Ruby
 
 First, use <https://github.com/postmodern/ruby-install> and <https://github.com/postmodern/chruby> to bootstrap Ruby 2.6
 
@@ -27,7 +33,7 @@ ruby-install ruby 2.6
 # >>> Successfully installed ruby 2.6.6 into /home/kvz/.rubies/ruby-2.6.6
 ```
 
-## Docker
+### Docker
 
 ```bash
 echo '{
@@ -38,14 +44,14 @@ sudo systemctl restart docker
 docker login
 ```
 
-## Deps
+### Deps
 
 ```bash
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 chruby 2.6
 echo "2.6" > ~/.ruby-version
-# gem install docker-template
+# gem install docker-template #<-- probably bundle install actually takes care of this
 bundle install
 script/install
 ```
