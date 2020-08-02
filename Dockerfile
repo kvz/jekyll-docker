@@ -1,4 +1,4 @@
-# WIP: currently unused. trying to reverse engineer the Dockerfile so we're 
+# WIP: currently unused. trying to reverse engineer the Dockerfile so we're
 # not relying on docker-template anymore
 FROM ruby:2.7.1-alpine3.11
 ADD repos/jekyll/copy/ /
@@ -81,8 +81,8 @@ ENV GEM_BIN=/usr/gem/bin
 ENV GEM_HOME=/usr/gem
 ENV RUBYOPT=-W0
 ENV JEKYLL_VAR_DIR=/var/jekyll
-ENV JEKYLL_DOCKER_TAG=4.1.0
-ENV JEKYLL_VERSION=4.1.0
+ENV JEKYLL_DOCKER_TAG=4.1.1
+ENV JEKYLL_VERSION=4.1.1
 ENV JEKYLL_DOCKER_COMMIT=c943c3494bbd019fa2e54178a27e405b495b7ec9
 ENV JEKYLL_DOCKER_NAME=jekyll
 ENV JEKYLL_DATA_DIR=/srv/jekyll
@@ -134,7 +134,7 @@ RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 RUN unset GEM_HOME && unset GEM_BIN && \
   yes | gem update --system
 RUN unset GEM_HOME && unset GEM_BIN && yes | gem install --force bundler
-RUN gem install jekyll -v4.1.0 -- \
+RUN gem install jekyll -v4.1.1 -- \
     --use-system-libraries
 RUN gem install html-proofer jekyll-reload jekyll-mentions jekyll-coffeescript jekyll-sass-converter jekyll-commonmark jekyll-paginate jekyll-compose jekyll-assets RedCloth kramdown jemoji jekyll-redirect-from jekyll-sitemap jekyll-feed minima -- \
     --use-system-libraries

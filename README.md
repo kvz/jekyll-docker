@@ -1,6 +1,6 @@
 # jekyll-docker
 
-It seems it may take some time before there are official Jekyll docker releases, so as an intermediary solution I forked this from <https://github.com/envygeeks/jekyll-docker> and pushed out 4.1.0 docker images under `kevinvz/jeyll:4.1.0`.
+It seems it may take some time before there are official Jekyll docker releases, so as an intermediary solution I forked this from <https://github.com/envygeeks/jekyll-docker> and pushed out 4.1.1 docker images under `kevinvz/jeyll:4.1.1`.
 
 > I don't know Ruby or its ecosystem well, and will not have the time to maintain or support this, so use it as is (or probably even better, don't use it at all).
 
@@ -59,6 +59,6 @@ script/install
 ## Build
 
 ```bash
-bundle exec docker-template build kevinvz/jekyll:4.1.0 --no-push --force --squash \
-&& bundle exec docker-template push kevinvz/jekyll:4.1.0
+bundle exec docker-template build kevinvz/jekyll:4.1.1 --no-push --force --squash \
+&& bundle exec docker-template push kevinvz/jekyll:4.1.1
 ```
