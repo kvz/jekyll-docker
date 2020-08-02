@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "docker-template"
+gem "docker-template", "0.22.0"
 
 group :development do
   gem 'envygeeks-rubocop'
