@@ -59,6 +59,9 @@ script/install
 ## Build
 
 ```bash
-bundle exec docker-template build kevinvz/jekyll:4.1.1 --no-push --force --squash \
-&& bundle exec docker-template push kevinvz/jekyll:4.1.1
+bundle exec docker-template build kevinvz/jekyll:4.1.1 --no-push --force --squash
+
+cd jekyll-docker/repos/jekyll
+docker push kevinvz/jekyll:4.1.1
+# bundle exec docker-template push kevinvz/jekyll:4.1.1
 ```
